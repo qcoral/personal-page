@@ -1,5 +1,6 @@
 ---
-
+import Navbar from '../components/react/Navbar.jsx';
+import Header from '../components/Header.astro';
 ---
 
 <html lang="en">
@@ -9,9 +10,9 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
-	</head
+	</head>
+	<Header/>
 	<body >
-		<h1 class="ptest">Astro</h1>
 		<article class="prose">
 			<h2>Garlic bread with cheese: What the science tells us</h2>
 			<p>
@@ -43,3 +44,4 @@
 	}
 </style>
 
+<!-- tl;dr: the where:() selector only works on children not the element itself  -->
