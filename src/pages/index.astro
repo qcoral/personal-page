@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
-	</head>
+	</head
 	<body >
 		<h1 class="ptest">Astro</h1>
 		<article class="prose">
@@ -29,6 +29,8 @@
 </html>
 
 <!-- Messing around with the where:() selector -->
+ <!-- The prose class doesn't work on itself, only its elements because of the where:() selector -->
+
 
 <style>
 	.ptest :is(h1) {
