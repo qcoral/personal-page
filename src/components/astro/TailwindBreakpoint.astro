@@ -1,0 +1,24 @@
+<!-- This component was partially generated with AI -->
+
+<span class="font-bold text-white" id="breakpoint-label">Loading...</span>
+<script>
+  // JavaScript to update breakpoint display
+  function updateBreakpoint() {
+    const width = window.innerWidth;
+    const breakpoint = (function () {
+      if (width >= 1536) return "2xl";
+      if (width >= 1280) return "xl";
+      if (width >= 1024) return "lg";
+      if (width >= 768) return "md";
+      if (width >= 640) return "sm";
+      return "xs";
+    })();
+    document.getElementById("breakpoint-label").innerText = breakpoint;
+  }
+
+  // Set initial breakpoint
+  updateBreakpoint();
+
+  // Update breakpoint on window resize
+  window.addEventListener("resize", updateBreakpoint);
+</script>
