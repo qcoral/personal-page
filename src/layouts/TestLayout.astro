@@ -1,18 +1,18 @@
 ---
-import Header from '../components/astro/Header.astro';
-const { title } = Astro.props;
+import Header from "../components/astro/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const { frontmatter } = Astro.props;
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <Header/>
+<BaseLayout>
 
-  <body>
-    <h1 class="prose">{title}</h1>
-    <article class="prose justify-center text-center">
-      <slot /> <!-- your content is injected here -->
-    </article>
-  </body>
-</html>
+  <Header />
+
+    <div class="flex justify-center pt-8">
+      <h1>{frontmatter.title}</h1>
+      <article class="prose justify-center text-center">
+        <slot />
+        <!-- your content is injected here -->
+      </article>
+    </div>
+
+</BaseLayout>

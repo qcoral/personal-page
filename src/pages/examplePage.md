@@ -1,9 +1,11 @@
 ---
 layout: ../layouts/TestLayout.astro
-title: "Hello, World!"
+title: "Is this thing on?"
 author: "Matthew Phillips"
 date: "09 Aug 2022"
 ---
+
+# Markdown content, redone!
 
 ### This is a test
 All frontmatter properties are available as props to an Astro layout component. \

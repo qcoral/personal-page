@@ -1,47 +1,21 @@
 ---
-import Navbar from '../components/react/Navbar.jsx';
-import Header from '../components/Header.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/astro/Header.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<Header/>
-	<body >
-		<article class="prose">
-			<h2>Garlic bread with cheese: What the science tells us</h2>
-			<p>
-			  For years parents have espoused the health benefits of eating garlic bread with cheese to their
-			  children, with the food earning such an iconic status in our culture that kids will often dress
-			  up as warm, cheesy loaf for Halloween.
-			</p>
-			<p>
-			  But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
-			  springing up around the country.
-			</p>
-			<!-- ... -->
-		  </article>
-	</body>
-</html>
-
-<!-- Messing around with the where:() selector -->
- <!-- The prose class doesn't work on itself, only its elements because of the where:() selector -->
-
-
-<style>
-	.ptest :is(h1) {
-    color: var(--tw-prose-headings);
-    font-weight: 800;
-    font-size: 2.25em;
-    margin-top: 0;
-    margin-bottom: 0.8888889em;
-    line-height: 1.1111111;
-	}
-</style>
-
-<!-- tl;dr: the where:() selector only works on children not the element itself  -->
+<BaseLayout>
+  <Header />
+  <div class="grid grid-cols-2">
+    <div>
+      <h1 class="text-left">hi!</h1>
+      <div class="items-flex">
+asd
+      </div>
+    </div>
+    <div class="font-mono">
+		asdf
+      <!-- description goes here -->
+      <slot />
+    </div>
+  </div>
+</BaseLayout>
